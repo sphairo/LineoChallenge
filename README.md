@@ -1,4 +1,4 @@
-# Lineo Challenge
+# Linio Challenge
 
 Description:
 
