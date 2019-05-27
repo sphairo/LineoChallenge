@@ -11,6 +11,17 @@ class FavoritesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        
+        RequestManager().request(with: Endpoint.favoritesURLString, body: nil, method: HttpMethod.GET) { [weak self] (success, jsonData, error, statusCode) in
+            if let jsonData = jsonData {
+                do {
+                    let favorites = try JSONDecoder().decode(Favorites.self, from: jsonData)
+                    print(favorites)
+                } catch let jsonError {
+                    print(jsonError.localizedDescription)
+                }
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
