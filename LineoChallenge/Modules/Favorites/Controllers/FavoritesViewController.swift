@@ -37,33 +37,22 @@ extension FavoritesViewController: UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.reuseIdentifier, for: indexPath) as! ProductCollectionViewCell
-        cell.backgroundColor = UIColor.red
         return cell
     }
 }
 
 extension FavoritesViewController: UICollectionViewDelegateFlowLayout {
-
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let padding: CGFloat =  50
-//        let collectionViewSize = collectionView.frame.size.width - padding
-//
-//        return CGSize(width: collectionViewSize/2, height: collectionViewSize/2)
-//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = UIScreen.main.bounds.size.width
         if indexPath.section == 0 {
-            return CGSize(width: width  , height: 178)
+            return CGSize(width: width - 20  , height: 178)
         }
-        return CGSize(width: ((width / 2) - 15)   , height: 174)
+        return CGSize(width: ((width - 40) / 2)   , height: 174)
     }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: collectionView.bounds.width, height: 44)
-//    }
-//
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        return UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -83,7 +72,7 @@ fileprivate extension FavoritesViewController {
     func setupView() {
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(ProductCollectionViewCell.self, forCellWithReuseIdentifier: ProductCollectionViewCell.reuseIdentifier)
+        collectionView.register(ProductCollectionViewCell.nib, forCellWithReuseIdentifier: ProductCollectionViewCell.reuseIdentifier)
         collectionView.alwaysBounceVertical = true
     }
 }
