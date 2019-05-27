@@ -45,8 +45,12 @@ class FavoritesViewModel {
         return numberOfItems == 0 ? "" : "(\(numberOfItems))"
     }
     
-    func objectAt(index: Int) -> Favorite? {
-        return favoritesModel?[index]
+    func objectAt(index: Int) -> Product {
+        return products[index]
+    }
+    
+    func getFavorites() -> Favorites? {
+        return favoritesModel
     }
     
 }

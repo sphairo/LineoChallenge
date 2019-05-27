@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="249" height="270"/>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6y6-Sd-UEz">
-                        <rect key="frame" x="0.0" y="0.0" width="30" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="30" height="180"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ndIc30PlusSquare" translatesAutoresizingMaskIntoConstraints="NO" id="wwh-SJ-vXO">
                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -40,13 +40,17 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ndIc30Plus48Square" translatesAutoresizingMaskIntoConstraints="NO" id="vUX-MQ-3CX">
                                 <rect key="frame" x="0.0" y="120" width="30" height="30"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ndIc30New" translatesAutoresizingMaskIntoConstraints="NO" id="kKN-Lf-Giw">
+                                <rect key="frame" x="0.0" y="150" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.94108384850000004" green="0.94124144320000003" blue="0.94106310609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                         </subviews>
                     </stackView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ndIc24FavOnPink" translatesAutoresizingMaskIntoConstraints="NO" id="o5c-Pl-1yJ">
-                        <rect key="frame" x="199" y="20" width="30" height="30"/>
+                        <rect key="frame" x="209" y="5" width="35" height="35"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="30" id="ZLE-4V-1fg"/>
-                            <constraint firstAttribute="height" constant="30" id="jP1-Ax-K0a"/>
+                            <constraint firstAttribute="width" constant="35" id="ZLE-4V-1fg"/>
+                            <constraint firstAttribute="height" constant="35" id="jP1-Ax-K0a"/>
                         </constraints>
                     </imageView>
                 </subviews>
@@ -56,13 +60,22 @@
                 <constraint firstItem="6y6-Sd-UEz" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="Med-IX-pno"/>
                 <constraint firstAttribute="bottom" secondItem="WMh-lU-SZk" secondAttribute="bottom" id="ZIY-zP-dHa"/>
                 <constraint firstItem="WMh-lU-SZk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="d2U-Zi-SaA"/>
-                <constraint firstItem="o5c-Pl-1yJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="jPm-X5-cp9"/>
-                <constraint firstAttribute="trailing" secondItem="o5c-Pl-1yJ" secondAttribute="trailing" constant="20" id="tFU-yz-hwd"/>
+                <constraint firstItem="o5c-Pl-1yJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="jPm-X5-cp9"/>
+                <constraint firstAttribute="trailing" secondItem="o5c-Pl-1yJ" secondAttribute="trailing" constant="5" id="tFU-yz-hwd"/>
                 <constraint firstItem="6y6-Sd-UEz" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="vfV-eP-mVS"/>
                 <constraint firstItem="WMh-lU-SZk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xX4-ka-JT5"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="249" height="270"/>
+            <connections>
+                <outlet property="freeShippingImageView" destination="Fo8-jW-evz" id="5jL-cK-jbs"/>
+                <outlet property="internationalImageView" destination="67r-V3-jZ2" id="l1S-xQ-SIv"/>
+                <outlet property="isNewImageView" destination="kKN-Lf-Giw" id="t1C-sA-r9q"/>
+                <outlet property="plus48ImageView" destination="vUX-MQ-3CX" id="3KJ-7s-0oe"/>
+                <outlet property="plusImageView" destination="wwh-SJ-vXO" id="AAA-nU-vx6"/>
+                <outlet property="productImageView" destination="WMh-lU-SZk" id="UIo-3j-qSa"/>
+                <outlet property="refusbishedImageView" destination="7fh-cW-da3" id="uSV-Iw-gBj"/>
+            </connections>
             <point key="canvasLocation" x="-225" y="-79"/>
         </collectionViewCell>
     </objects>
@@ -70,6 +83,7 @@
         <image name="ndIc24FavOnPink" width="24" height="24"/>
         <image name="ndIc30FreeShippingSquare" width="30" height="30"/>
         <image name="ndIc30InternationalSquare" width="30" height="30"/>
+        <image name="ndIc30New" width="30" height="30"/>
         <image name="ndIc30Plus48Square" width="30" height="30"/>
         <image name="ndIc30PlusSquare" width="30" height="30"/>
         <image name="ndIc30RefurbishedSquare" width="30" height="30"/>
