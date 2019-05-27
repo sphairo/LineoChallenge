@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="INICIO" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="136.5" y="312" width="103" height="43"/>
+                                <rect key="frame" x="136" y="312" width="103" height="43"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -33,7 +33,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="INICIO" image="ndIc32NavhomeOff" selectedImage="ndIc32NavhomeOn" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="INICIO" image="ndIc32NavhomeOff" selectedImage="ndIc32NavhomeOn" id="acW-dT-cKf">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="nameViewLabel" destination="KQZ-1w-vlD" id="KVW-p0-lKc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -47,22 +52,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="FAVORITOS" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="sW1-8n-n0Q">
-                                <rect key="frame" x="94.5" y="312" width="187" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MLg-TP-IvG">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e0U-iv-7a2">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hPN-Ra-ecu">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="sW1-8n-n0Q" firstAttribute="centerX" secondItem="9EI-QQ-jOu" secondAttribute="centerX" id="5FV-oQ-SjP"/>
-                            <constraint firstItem="sW1-8n-n0Q" firstAttribute="centerY" secondItem="9EI-QQ-jOu" secondAttribute="centerY" id="yWC-nj-aRu"/>
+                            <constraint firstItem="MLg-TP-IvG" firstAttribute="top" secondItem="Fte-BP-riP" secondAttribute="top" id="6wZ-rg-yvm"/>
+                            <constraint firstItem="Fte-BP-riP" firstAttribute="bottom" secondItem="MLg-TP-IvG" secondAttribute="bottom" id="91d-9E-Z1b"/>
+                            <constraint firstItem="Fte-BP-riP" firstAttribute="trailing" secondItem="MLg-TP-IvG" secondAttribute="trailing" id="nem-Et-nPW"/>
+                            <constraint firstItem="MLg-TP-IvG" firstAttribute="leading" secondItem="Fte-BP-riP" secondAttribute="leading" id="tJl-jW-cDW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fte-BP-riP"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="FAVORITOS" image="ndIc32NavFavoriteOff" selectedImage="ndIc32NavFavoriteOn" id="FP2-Vf-rh9"/>
+                    <connections>
+                        <outlet property="collectionView" destination="MLg-TP-IvG" id="UTi-xz-Vls"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4u-QJ-Y89" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,7 +94,7 @@
         <!--BUSCAR-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SearchViewController" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="SearchViewController" customModule="LineoChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,7 +114,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="BUSCAR" image="ndIc32NavSearchOff" selectedImage="ndIc32NavSearchOn" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="BUSCAR" image="ndIc32NavSearchOff" selectedImage="ndIc32NavSearchOn" id="cPa-gy-q4n">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="nameViewLabel" destination="zEq-FU-wV5" id="lMi-l8-2iN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,13 +128,13 @@
         <!--MI CUENTA-->
         <scene sceneID="T6W-lk-DIU">
             <objects>
-                <viewController id="maA-YR-HkK" sceneMemberID="viewController">
+                <viewController id="maA-YR-HkK" customClass="MyAccountViewController" customModule="LineoChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4CU-Ub-GE3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="MI CUENTA" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dpa-Ag-e4n">
-                                <rect key="frame" x="96" y="312" width="184" height="43"/>
+                                <rect key="frame" x="95.5" y="312" width="184" height="43"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -121,6 +149,9 @@
                         <viewLayoutGuide key="safeArea" id="5V2-Gj-YhL"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="MI CUENTA" image="ndIc32NavAccountOff" selectedImage="ndIc32NavAccountOn" id="XzS-Ik-z2M"/>
+                    <connections>
+                        <outlet property="nameViewLabel" destination="Dpa-Ag-e4n" id="GwH-pz-ls3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ub-xY-Xku" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -129,13 +160,13 @@
         <!--CARRITO-->
         <scene sceneID="GOR-Fu-T3g">
             <objects>
-                <viewController id="HmG-7h-ucR" sceneMemberID="viewController">
+                <viewController id="HmG-7h-ucR" customClass="CartViewController" customModule="LineoChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dFJ-uh-QNU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="CARRITO" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="aXj-dw-YtZ">
-                                <rect key="frame" x="114" y="312" width="148" height="43"/>
+                                <rect key="frame" x="113.5" y="312" width="148" height="43"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -150,6 +181,9 @@
                         <viewLayoutGuide key="safeArea" id="v5q-U3-ZJZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="CARRITO" image="ndIc32NavCartOff" selectedImage="ndIc32NavCartOn" id="JAZ-SG-5zn"/>
+                    <connections>
+                        <outlet property="nameViewLabel" destination="aXj-dw-YtZ" id="wUE-T0-usY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPU-8S-96f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,6 +214,7 @@
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>

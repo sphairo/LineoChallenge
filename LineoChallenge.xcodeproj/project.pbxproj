@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B2FA975229BBCB8009328BD /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2FA973229BBCB8009328BD /* ProductCollectionViewCell.swift */; };
+		9B2FA976229BBCB8009328BD /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B2FA974229BBCB8009328BD /* ProductCollectionViewCell.xib */; };
 		9B7004EB229AF86500E20E80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7004EA229AF86500E20E80 /* AppDelegate.swift */; };
 		9B7004ED229AF86500E20E80 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7004EC229AF86500E20E80 /* StartViewController.swift */; };
 		9B7004EF229AF86500E20E80 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7004EE229AF86500E20E80 /* SearchViewController.swift */; };
@@ -15,9 +17,21 @@
 		9B7004F7229AF86700E20E80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B7004F5229AF86700E20E80 /* LaunchScreen.storyboard */; };
 		9B700512229B0BCC00E20E80 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B700511229B0BCC00E20E80 /* FavoritesViewController.swift */; };
 		9B700514229B0F4400E20E80 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B700513229B0F4400E20E80 /* TabBarController.swift */; };
+		9B7ACBAA229B842700DE7DFC /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ACBA9229B842700DE7DFC /* MyAccountViewController.swift */; };
+		9B7ACBCE229B89D800DE7DFC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B7ACBC3229B89D800DE7DFC /* Localizable.strings */; };
+		9B7ACBD1229B89D800DE7DFC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B7ACBCA229B89D800DE7DFC /* Localizable.strings */; };
+		9B7ACBD3229B8BCE00DE7DFC /* NavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ACBD2229B8BCE00DE7DFC /* NavigationBarExtension.swift */; };
+		9B7ACBD5229B8C9F00DE7DFC /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ACBD4229B8C9F00DE7DFC /* NSObjectExtension.swift */; };
+		9B7ACBD8229B8E3000DE7DFC /* ControllerName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ACBD7229B8E3000DE7DFC /* ControllerName.swift */; };
+		9B7ACBDA229B944D00DE7DFC /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ACBD9229B944D00DE7DFC /* CartViewController.swift */; };
+		9B7ACBDE229B9EFE00DE7DFC /* StructContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ACBDD229B9EFE00DE7DFC /* StructContants.swift */; };
+		9B7ACBE9229BA55000DE7DFC /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ACBE8229BA55000DE7DFC /* FavoritesViewModel.swift */; };
+		9B7ACBEB229BA57900DE7DFC /* FavoriteStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ACBEA229BA57900DE7DFC /* FavoriteStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B2FA973229BBCB8009328BD /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		9B2FA974229BBCB8009328BD /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		9B7004E7229AF86500E20E80 /* LineoChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineoChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B7004EA229AF86500E20E80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B7004EC229AF86500E20E80 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -26,12 +40,18 @@
 		9B7004F8229AF86700E20E80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B700505229B058C00E20E80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B700506229B058C00E20E80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9B70050D229B083900E20E80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		9B70050E229B083900E20E80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		9B70050F229B089800E20E80 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
-		9B700510229B089800E20E80 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		9B700511229B0BCC00E20E80 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		9B700513229B0F4400E20E80 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		9B7ACBA9229B842700DE7DFC /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
+		9B7ACBC4229B89D800DE7DFC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
+		9B7ACBCB229B89D800DE7DFC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Localizable.strings; sourceTree = "<group>"; };
+		9B7ACBD2229B8BCE00DE7DFC /* NavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtension.swift; sourceTree = "<group>"; };
+		9B7ACBD4229B8C9F00DE7DFC /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		9B7ACBD7229B8E3000DE7DFC /* ControllerName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerName.swift; sourceTree = "<group>"; };
+		9B7ACBD9229B944D00DE7DFC /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		9B7ACBDD229B9EFE00DE7DFC /* StructContants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructContants.swift; sourceTree = "<group>"; };
+		9B7ACBE8229BA55000DE7DFC /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		9B7ACBEA229BA57900DE7DFC /* FavoriteStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,16 +85,148 @@
 			isa = PBXGroup;
 			children = (
 				9B7004EA229AF86500E20E80 /* AppDelegate.swift */,
-				9B7004EC229AF86500E20E80 /* StartViewController.swift */,
-				9B7004EE229AF86500E20E80 /* SearchViewController.swift */,
-				9B700511229B0BCC00E20E80 /* FavoritesViewController.swift */,
 				9B700513229B0F4400E20E80 /* TabBarController.swift */,
+				9B7ACBAB229B852400DE7DFC /* Extensions */,
+				9B7ACBD6229B8DF500DE7DFC /* Enumerations */,
+				9B7ACBDC229B9EED00DE7DFC /* Structs */,
+				9B7ACBDB229B949A00DE7DFC /* Modules */,
 				9B7004F0229AF86500E20E80 /* Main.storyboard */,
 				9B7004F3229AF86700E20E80 /* Assets.xcassets */,
 				9B7004F5229AF86700E20E80 /* LaunchScreen.storyboard */,
 				9B7004F8229AF86700E20E80 /* Info.plist */,
+				9B7ACBBE229B89D800DE7DFC /* en.lproj */,
+				9B7ACBC5229B89D800DE7DFC /* es.lproj */,
 			);
 			path = LineoChallenge;
+			sourceTree = "<group>";
+		};
+		9B7ACBAB229B852400DE7DFC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9B7ACBD2229B8BCE00DE7DFC /* NavigationBarExtension.swift */,
+				9B7ACBD4229B8C9F00DE7DFC /* NSObjectExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9B7ACBBE229B89D800DE7DFC /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				9B7ACBC3229B89D800DE7DFC /* Localizable.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		9B7ACBC5229B89D800DE7DFC /* es.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				9B7ACBCA229B89D800DE7DFC /* Localizable.strings */,
+			);
+			path = es.lproj;
+			sourceTree = "<group>";
+		};
+		9B7ACBD6229B8DF500DE7DFC /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				9B7ACBD7229B8E3000DE7DFC /* ControllerName.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		9B7ACBDB229B949A00DE7DFC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9B7ACBE0229BA23700DE7DFC /* Start */,
+				9B7ACBE1229BA23F00DE7DFC /* Search */,
+				9B7ACBDF229BA22A00DE7DFC /* Favorites */,
+				9B7ACBE2229BA24700DE7DFC /* MyAccount */,
+				9B7ACBE3229BA24F00DE7DFC /* Cart */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9B7ACBDC229B9EED00DE7DFC /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				9B7ACBDD229B9EFE00DE7DFC /* StructContants.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		9B7ACBDF229BA22A00DE7DFC /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				9B7ACBE7229BA36300DE7DFC /* Views */,
+				9B7ACBE6229BA35A00DE7DFC /* ViewModel */,
+				9B7ACBE5229BA35400DE7DFC /* Models */,
+				9B7ACBE4229BA34B00DE7DFC /* Controllers */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		9B7ACBE0229BA23700DE7DFC /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				9B7004EC229AF86500E20E80 /* StartViewController.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		9B7ACBE1229BA23F00DE7DFC /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9B7004EE229AF86500E20E80 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		9B7ACBE2229BA24700DE7DFC /* MyAccount */ = {
+			isa = PBXGroup;
+			children = (
+				9B7ACBA9229B842700DE7DFC /* MyAccountViewController.swift */,
+			);
+			path = MyAccount;
+			sourceTree = "<group>";
+		};
+		9B7ACBE3229BA24F00DE7DFC /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				9B7ACBD9229B944D00DE7DFC /* CartViewController.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		9B7ACBE4229BA34B00DE7DFC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9B700511229B0BCC00E20E80 /* FavoritesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9B7ACBE5229BA35400DE7DFC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9B7ACBEA229BA57900DE7DFC /* FavoriteStruct.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9B7ACBE6229BA35A00DE7DFC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9B7ACBE8229BA55000DE7DFC /* FavoritesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9B7ACBE7229BA36300DE7DFC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B2FA973229BBCB8009328BD /* ProductCollectionViewCell.swift */,
+				9B2FA974229BBCB8009328BD /* ProductCollectionViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +270,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
+				en,
+				es,
 			);
 			mainGroup = 9B7004DE229AF86500E20E80;
 			productRefGroup = 9B7004E8229AF86500E20E80 /* Products */;
@@ -135,7 +289,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B7004F7229AF86700E20E80 /* LaunchScreen.storyboard in Resources */,
+				9B7ACBCE229B89D800DE7DFC /* Localizable.strings in Resources */,
+				9B2FA976229BBCB8009328BD /* ProductCollectionViewCell.xib in Resources */,
 				9B7004F4229AF86700E20E80 /* Assets.xcassets in Resources */,
+				9B7ACBD1229B89D800DE7DFC /* Localizable.strings in Resources */,
 				9B7004F2229AF86500E20E80 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,10 +305,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B7004EF229AF86500E20E80 /* SearchViewController.swift in Sources */,
+				9B7ACBEB229BA57900DE7DFC /* FavoriteStruct.swift in Sources */,
+				9B2FA975229BBCB8009328BD /* ProductCollectionViewCell.swift in Sources */,
+				9B7ACBD3229B8BCE00DE7DFC /* NavigationBarExtension.swift in Sources */,
+				9B7ACBDE229B9EFE00DE7DFC /* StructContants.swift in Sources */,
+				9B7ACBDA229B944D00DE7DFC /* CartViewController.swift in Sources */,
 				9B7004EB229AF86500E20E80 /* AppDelegate.swift in Sources */,
+				9B7ACBAA229B842700DE7DFC /* MyAccountViewController.swift in Sources */,
+				9B7ACBE9229BA55000DE7DFC /* FavoritesViewModel.swift in Sources */,
 				9B700512229B0BCC00E20E80 /* FavoritesViewController.swift in Sources */,
 				9B700514229B0F4400E20E80 /* TabBarController.swift in Sources */,
 				9B7004ED229AF86500E20E80 /* StartViewController.swift in Sources */,
+				9B7ACBD5229B8C9F00DE7DFC /* NSObjectExtension.swift in Sources */,
+				9B7ACBD8229B8E3000DE7DFC /* ControllerName.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,8 +328,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				9B700505229B058C00E20E80 /* Base */,
-				9B70050D229B083900E20E80 /* en */,
-				9B70050F229B089800E20E80 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -172,10 +336,24 @@
 			isa = PBXVariantGroup;
 			children = (
 				9B700506229B058C00E20E80 /* Base */,
-				9B70050E229B083900E20E80 /* en */,
-				9B700510229B089800E20E80 /* es */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9B7ACBC3229B89D800DE7DFC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B7ACBC4229B89D800DE7DFC /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		9B7ACBCA229B89D800DE7DFC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B7ACBCB229B89D800DE7DFC /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
