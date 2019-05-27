@@ -5,9 +5,10 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         setupTabBar()
     }
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setupNavigationBarTitle()
+        selectedIndex = 2//Default index selected for this challenge
     }
 }
 

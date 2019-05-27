@@ -11,7 +11,9 @@
 		9B2FA976229BBCB8009328BD /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B2FA974229BBCB8009328BD /* ProductCollectionViewCell.xib */; };
 		9B323CBB229BC8190098B207 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B323CB9229BC8190098B207 /* RequestManager.swift */; };
 		9B323CBC229BC8190098B207 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B323CBA229BC8190098B207 /* ImageManager.swift */; };
-		9B323CBE229BD1FB0098B207 /* StructEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B323CBD229BD1FB0098B207 /* StructEndpoints.swift */; };
+		9B5C4FCD229C593B007BF065 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C4FCB229C593B007BF065 /* UserCollectionViewCell.swift */; };
+		9B5C4FCE229C593B007BF065 /* UserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B5C4FCC229C593B007BF065 /* UserCollectionViewCell.xib */; };
+		9B5C4FD2229C5A7E007BF065 /* FavoritesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C4FD1229C5A7E007BF065 /* FavoritesAPI.swift */; };
 		9B7004EB229AF86500E20E80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7004EA229AF86500E20E80 /* AppDelegate.swift */; };
 		9B7004ED229AF86500E20E80 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7004EC229AF86500E20E80 /* StartViewController.swift */; };
 		9B7004EF229AF86500E20E80 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7004EE229AF86500E20E80 /* SearchViewController.swift */; };
@@ -37,7 +39,9 @@
 		9B2FA974229BBCB8009328BD /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		9B323CB9229BC8190098B207 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		9B323CBA229BC8190098B207 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
-		9B323CBD229BD1FB0098B207 /* StructEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructEndpoints.swift; sourceTree = "<group>"; };
+		9B5C4FCB229C593B007BF065 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
+		9B5C4FCC229C593B007BF065 /* UserCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCollectionViewCell.xib; sourceTree = "<group>"; };
+		9B5C4FD1229C5A7E007BF065 /* FavoritesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesAPI.swift; sourceTree = "<group>"; };
 		9B7004E7229AF86500E20E80 /* LineoChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineoChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B7004EA229AF86500E20E80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B7004EC229AF86500E20E80 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +84,22 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		9B5C4FCF229C5A2E007BF065 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9B5C4FD0229C5A3A007BF065 /* API */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9B5C4FD0229C5A3A007BF065 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9B5C4FD1229C5A7E007BF065 /* FavoritesAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		9B7004DE229AF86500E20E80 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +125,7 @@
 				9B7ACBAB229B852400DE7DFC /* Extensions */,
 				9B7ACBD6229B8DF500DE7DFC /* Enumerations */,
 				9B7ACBDC229B9EED00DE7DFC /* Structs */,
+				9B5C4FCF229C5A2E007BF065 /* Services */,
 				9B7ACBDB229B949A00DE7DFC /* Modules */,
 				9B7004F0229AF86500E20E80 /* Main.storyboard */,
 				9B7004F3229AF86700E20E80 /* Assets.xcassets */,
@@ -165,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				9B7ACBDD229B9EFE00DE7DFC /* StructContants.swift */,
-				9B323CBD229BD1FB0098B207 /* StructEndpoints.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -242,6 +262,8 @@
 			children = (
 				9B2FA973229BBCB8009328BD /* ProductCollectionViewCell.swift */,
 				9B2FA974229BBCB8009328BD /* ProductCollectionViewCell.xib */,
+				9B5C4FCB229C593B007BF065 /* UserCollectionViewCell.swift */,
+				9B5C4FCC229C593B007BF065 /* UserCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -307,6 +329,7 @@
 			files = (
 				9B7004F7229AF86700E20E80 /* LaunchScreen.storyboard in Resources */,
 				9B7ACBCE229B89D800DE7DFC /* Localizable.strings in Resources */,
+				9B5C4FCE229C593B007BF065 /* UserCollectionViewCell.xib in Resources */,
 				9B2FA976229BBCB8009328BD /* ProductCollectionViewCell.xib in Resources */,
 				9B7004F4229AF86700E20E80 /* Assets.xcassets in Resources */,
 				9B7ACBD1229B89D800DE7DFC /* Localizable.strings in Resources */,
@@ -331,11 +354,12 @@
 				9B7004EB229AF86500E20E80 /* AppDelegate.swift in Sources */,
 				9B7ACBAA229B842700DE7DFC /* MyAccountViewController.swift in Sources */,
 				9B7ACBE9229BA55000DE7DFC /* FavoritesViewModel.swift in Sources */,
-				9B323CBE229BD1FB0098B207 /* StructEndpoints.swift in Sources */,
 				9B700512229B0BCC00E20E80 /* FavoritesViewController.swift in Sources */,
+				9B5C4FD2229C5A7E007BF065 /* FavoritesAPI.swift in Sources */,
 				9B323CBC229BC8190098B207 /* ImageManager.swift in Sources */,
 				9B700514229B0F4400E20E80 /* TabBarController.swift in Sources */,
 				9B7004ED229AF86500E20E80 /* StartViewController.swift in Sources */,
+				9B5C4FCD229C593B007BF065 /* UserCollectionViewCell.swift in Sources */,
 				9B7ACBD5229B8C9F00DE7DFC /* NSObjectExtension.swift in Sources */,
 				9B7ACBD8229B8E3000DE7DFC /* ControllerName.swift in Sources */,
 			);

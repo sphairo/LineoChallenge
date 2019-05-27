@@ -1,42 +1,38 @@
 import UIKit
 
-protocol FavoritesProtocol {
-    func getMyFavorites()
-}
-
 class FavoritesViewController: UIViewController {
     
+    var favoritesViewModel = FavoritesViewModel()
+    static var numberOfSections: Int = 2
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        favoritesViewModel.attachView(self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        
-        RequestManager().request(with: Endpoint.favoritesURLString, body: nil, method: HttpMethod.GET) { [weak self] (success, jsonData, error, statusCode) in
-            if let jsonData = jsonData {
-                do {
-                    let favorites = try JSONDecoder().decode(Favorites.self, from: jsonData)
-                    print(favorites)
-                } catch let jsonError {
-                    print(jsonError.localizedDescription)
-                }
-            }
-        }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setupNavigationBarTitle()
     }
 }
 
 extension FavoritesViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return FavoritesViewController.numberOfSections
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        if section == 0 {
+            return 1
+        }
+        return favoritesViewModel.numberOfItems()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -47,19 +43,33 @@ extension FavoritesViewController: UICollectionViewDataSource, UICollectionViewD
 }
 
 extension FavoritesViewController: UICollectionViewDelegateFlowLayout {
+
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let padding: CGFloat =  50
+//        let collectionViewSize = collectionView.frame.size.width - padding
+//
+//        return CGSize(width: collectionViewSize/2, height: collectionViewSize/2)
+//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width, height: 44)
+        let width = UIScreen.main.bounds.size.width
+        if indexPath.section == 0 {
+            return CGSize(width: width  , height: 178)
+        }
+        return CGSize(width: ((width / 2) - 15)   , height: 174)
     }
-    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: collectionView.bounds.width, height: 44)
+//    }
+//
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 20
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 20
     }
