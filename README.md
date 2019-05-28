@@ -1,5 +1,7 @@
 # Linio Challenge
 
+<img src="https://raw.githubusercontent.com/sphairo/LinioChallenge/c150610c66bcf805d911ecb22d192255bbf7d748/lineoChallenge.png" width="250" height="450"/>
+
 Description:
 
 This Application support iOS 9.0+, the title changes according to the user's current selection, the only section programmed is the Section Favorites, that contains some features.
