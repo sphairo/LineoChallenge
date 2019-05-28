@@ -24,14 +24,14 @@ class UserCollectionViewCell: UICollectionViewCell {
         return UINib(nibName: reuseIdentifier, bundle: nil)
     }
 
+    func setupViewCell(with favorites: Favorites) {
+        self.favorites = favorites
+    }
+    
     private func setupViewCell() {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(CollectionCreatedByUserCell.nib, forCellWithReuseIdentifier: CollectionCreatedByUserCell.reuseIdentifier)
-    }
-    
-    func setupViewCell(with favorites: Favorites) {
-        self.favorites = favorites
     }
 }
 
@@ -52,12 +52,7 @@ extension UserCollectionViewCell: UICollectionViewDataSource, UICollectionViewDe
 }
 
 extension UserCollectionViewCell: UICollectionViewDelegateFlowLayout {
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 174, height: 178)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 }

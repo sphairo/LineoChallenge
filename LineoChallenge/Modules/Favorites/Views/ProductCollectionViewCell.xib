@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="249" height="270"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ndIc30FreeShippingSquare" translatesAutoresizingMaskIntoConstraints="NO" id="WMh-lU-SZk">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ndIc30FreeShippingSquare" translatesAutoresizingMaskIntoConstraints="NO" id="WMh-lU-SZk">
                         <rect key="frame" x="0.0" y="0.0" width="249" height="270"/>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6y6-Sd-UEz">
@@ -55,6 +55,7 @@
                     </imageView>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="WMh-lU-SZk" secondAttribute="trailing" id="JSS-jI-o3o"/>
                 <constraint firstItem="6y6-Sd-UEz" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="Med-IX-pno"/>

@@ -9,9 +9,6 @@ class FavoritesViewController: UIViewController {
     
     var favoritesViewModel = FavoritesViewModel()
     static var numberOfSections: Int = 2
-    lazy var screenWidth: CGFloat = {
-        return UIScreen.main.bounds.size.width
-    }()
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -29,14 +26,10 @@ class FavoritesViewController: UIViewController {
         super.viewWillAppear(animated)
         setupNavigationBarTitle()
     }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        collectionView.collectionViewLayout.invalidateLayout()
-    }
 }
 
 extension FavoritesViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return FavoritesViewController.numberOfSections
     }
@@ -69,7 +62,7 @@ extension FavoritesViewController: UICollectionViewDataSource, UICollectionViewD
         if section == Section.userCollections {
             return CGSize.zero
         }
-        return CGSize(width: screenWidth, height: 45)
+        return CGSize(width: collectionView.frame.size.width, height: 45)
     }
 }
 
@@ -77,9 +70,9 @@ extension FavoritesViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == Section.userCollections {
-            return CGSize(width: screenWidth - 20  , height: 178)
+            return CGSize(width: collectionView.frame.size.width - 20  , height: 178)
         }
-        return CGSize(width: ((screenWidth - 40) / 2)   , height: 174)
+        return CGSize(width: ((collectionView.frame.size.width - 40) / 2)   , height: 174)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -96,6 +89,7 @@ extension FavoritesViewController: UICollectionViewDelegateFlowLayout {
 }
 
 fileprivate extension FavoritesViewController {
+    
     func setupNavigationBarTitle() {
         navigationController?.navigationBar.setupNavigationBarTitle(className: self.className)
     }
