@@ -1,6 +1,6 @@
 # Linio Challenge
 
-<img src="https://raw.githubusercontent.com/sphairo/LinioChallenge/c150610c66bcf805d911ecb22d192255bbf7d748/lineoChallenge.png" width="250" height="450"/>
+<img src="https://github.com/sphairo/LinioChallenge/blob/master/portrait.png?raw=true" width="250" height="450"/>
 
 Description:
 
