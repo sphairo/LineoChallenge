@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="HeaderSectionReusableView" customModule="LineoChallenge" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
@@ -30,6 +30,10 @@
                 <constraint firstItem="I6D-vE-1xr" firstAttribute="centerX" secondItem="VXr-Tz-HHm" secondAttribute="centerX" id="oGZ-O1-fML"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="nameSectionLabel" destination="I6D-vE-1xr" id="i5z-4F-J3w"/>
+            </connections>
+            <point key="canvasLocation" x="21" y="-117"/>
         </collectionReusableView>
     </objects>
 </document>
